@@ -222,7 +222,8 @@ http://<IP>:8080/AWS-Docker-Amit-2/
 
 
 -------------------------------------****************************------------------------------------------------
-
+****1.create user natasha,hari,sara set a common password algebra and hari and natasha are in wheel group.****
+ 
 
 
 **1. Switch to the root user**
