@@ -218,3 +218,59 @@ Jenkins-Docker-Kubernetes-Project4/src/main/webapp/index.html
 • Test the URL
 http://<IP>:8080/
 http://<IP>:8080/AWS-Docker-Amit-2/
+
+
+
+
+
+
+
+**1. Switch to the root user**
+
+       sudo su -
+
+sudo su -: This command switches you to the root user, giving you administrative privileges to perform system-wide changes.
+**2. Create users and set passwords**
+
+    useradd hary
+    passwd hary
+    useradd natasha
+    passwd natasha
+    useradd sara
+    passwd sara
+
+useradd hary: Creates a new user named hary.
+passwd hary: Sets the password for the user hary. You will be prompted to enter the password (in this case, “algebra”).
+useradd natasha: Creates a new user named natasha.
+passwd natasha: Sets the password for the user natasha.
+useradd sara: Creates a new user named sara.
+passwd sara: Sets the password for the user sara.
+
+**3. Add users to the wheel group**
+            
+    usermod -G wheel hary
+    usermod -G wheel natasha
+
+usermod -G wheel hary: Adds the user hary to the wheel group. The wheel group typically has administrative privileges.
+usermod -G wheel natasha: Adds the user natasha to the wheel group.
+**4. Verify the users in the wheel group**
+
+    cat /etc/group | grep -i wheel
+
+cat /etc/group: Displays the contents of the /etc/group file, which lists all the groups and their members.
+grep -i wheel: Filters the output to show only the lines containing “wheel”, ignoring case sensitivity.
+
+Explanation of the output
+wheel:x:10:ec2-user,hary,natasha
+
+wheel: The name of the group.
+x: Indicates that the group has a password (usually not used in modern systems).
+10: The Group ID (GID) for the wheel group.
+ec2-user,hary,natasha: The list of users who are members of the wheel group.
+
+    Summary
+    sudo su -: Switch to root user.
+    useradd: Create new users.    
+    passwd: Set passwords for users.
+    usermod -G wheel: Add users to the wheel group.
+    cat /etc/group | grep -i wheel: Verify users in the wheel group.
