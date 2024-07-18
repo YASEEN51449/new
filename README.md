@@ -254,6 +254,7 @@ passwd sara: Sets the password for the user sara.
 
 usermod -G wheel hary: Adds the user hary to the wheel group. The wheel group typically has administrative privileges.
 usermod -G wheel natasha: Adds the user natasha to the wheel group.
+
 **4. Verify the users in the wheel group**
 
     cat /etc/group | grep -i wheel
