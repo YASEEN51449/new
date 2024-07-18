@@ -230,6 +230,7 @@ http://<IP>:8080/AWS-Docker-Amit-2/
        sudo su -
 
 sudo su -: This command switches you to the root user, giving you administrative privileges to perform system-wide changes.
+
 **2. Create users and set passwords**
 
     useradd hary
